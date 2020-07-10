@@ -1,7 +1,7 @@
 {
   "project_name": "My Python Package",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-  "project_dir": "{{ cookiecutter.project_slug }}",
+  "project_dir": "{{ cookiecutter.project_slug.replace('-', '_') }}",
   "project_short_description": "My super cool Python package",
   "version": "0.1.0",
   "use_django": "y",
