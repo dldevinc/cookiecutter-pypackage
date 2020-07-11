@@ -30,3 +30,11 @@ if __name__ == '__main__':
         remove('tests/wsgi.py')
         move('tests/tests/test_{{cookiecutter.project_slug}}.py', 'tests/test_{{cookiecutter.project_slug}}.py')
         remove('tests/tests')
+
+    if '{{ cookiecutter.use_pytest }}' != 'y':
+        remove('tests')
+        remove('tox.ini')
+        remove('pytest.ini')
+
+    if '{{ cookiecutter.use_travis }}' != 'y':
+        remove('.travis.yml')

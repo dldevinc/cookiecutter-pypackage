@@ -14,7 +14,9 @@ virtualenv .venv
 source .venv/bin/activate
 pip install -r ./requirements_dev.txt
 ```
+{%- if cookiecutter.use_pytest == 'y' %}
 Then, you can run tests:
 ```shell script
 pytest
 ```
+{%- endif %}

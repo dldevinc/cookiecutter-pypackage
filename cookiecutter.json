@@ -6,6 +6,7 @@
   "version": "0.1.0",
   "use_django": "y",
   "use_pytest": "y",
+  "use_coverage": "y",
   "use_travis": "y",
   "full_name": "Mihail Mishakin",
   "email": "x896321475@gmail.com",
