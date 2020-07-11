@@ -1,4 +1,9 @@
 twine==3.2.0
+black==19.10b0
+isort==5.0.9
+flake8==3.8.3
+flake8-isort==3.0.1
+pep8-naming==0.11.1
 {%- if cookiecutter.use_pytest == 'y' %}
 tox==3.16.1
 tox-factor==0.1.2
