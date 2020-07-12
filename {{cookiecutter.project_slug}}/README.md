@@ -12,15 +12,24 @@ in a virtualenv and set up for development:
 ```shell script
 virtualenv .venv
 source .venv/bin/activate
+{%- if cookiecutter.use_precommit == 'y' %}
+pip install tox tox-factor pre-commit twine
+{%- else %}
+pip install tox tox-factor twine
+{%- endif %}
 pip install -r ./requirements_dev.txt
+pre-commit install
 ```
 
-Then, you can run `isort` and `black`:
+{% if cookiecutter.use_precommit == 'y' -%}
+Then, you can run pre-commit hooks and tests:
 ```shell script
-tox -e format
+pre-commit run a
+tox -f py38
 ```
-
-Or check code with `flake8`:
+{% else %}
+Then, you can run tests:
 ```shell script
-tox -e flake8
+tox -f py38
 ```
+{%- endif %}

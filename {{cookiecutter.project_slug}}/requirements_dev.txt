@@ -1,7 +1,4 @@
-twine==3.2.0
 {%- if cookiecutter.use_pytest == 'y' %}
-tox==3.16.1
-tox-factor==0.1.2
 pytest==5.4.3
 pytest-env==0.6.2
 pytest-cov==2.10.0

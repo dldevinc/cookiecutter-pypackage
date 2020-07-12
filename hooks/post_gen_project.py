@@ -36,5 +36,8 @@ if __name__ == '__main__':
         remove('tox.ini')
         remove('pytest.ini')
 
+    if '{{ cookiecutter.use_precommit }}' != 'y':
+        remove('.pre-commit-config.yaml')
+
     if '{{ cookiecutter.use_travis }}' != 'y':
         remove('.travis.yml')
