@@ -7,16 +7,20 @@
 {%- endif %}
 
 ## Development and Testing
-After cloning the Git repository, you should install this
+After cloning the Git repository, you should install this 
 in a virtualenv and set up for development:
 ```shell script
 virtualenv .venv
 source .venv/bin/activate
 pip install -r ./requirements_dev.txt
 ```
-{%- if cookiecutter.use_pytest == 'y' %}
-Then, you can run tests:
+
+Then, you can run `isort` and `black`:
 ```shell script
-pytest
+tox -e format
 ```
-{%- endif %}
+
+Or check code with `flake8`:
+```shell script
+tox -e flake8
+```
