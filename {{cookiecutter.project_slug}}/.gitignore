@@ -105,5 +105,7 @@ ENV/
 .idea/
 .vscode/
 
+{% if cookiecutter.use_django == 'y' -%}
 # tests
 **/tests/db.sqlite3
+{%- endif %}
