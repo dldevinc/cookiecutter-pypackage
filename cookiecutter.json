@@ -4,6 +4,11 @@
   "project_dir": "{{ cookiecutter.project_slug.replace('-', '_') }}",
   "project_short_description": "My Python package",
   "version": "0.1.0",
+  "stage": [
+    "Alpha",
+    "Beta",
+    "Stable"
+  ],
   "use_pytest": "y",
   "use_coverage": "y",
   "use_django": "y",
