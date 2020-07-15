@@ -7,7 +7,7 @@
 * Measuring code coverage with `pytest-cov`
 * [Tox][tox] testing
 * [Black][black] and [isort][isort] pre-commit hooks for formatting
-* [Flake8][flake8] pre-commit hook for linting
+* [Flake8][flake8] and [MyPy][mypy] pre-commit hooks for linting
 * [Travis-CI][travis]: Ready for Travis CI testing
 * Auto-release to PyPI when you push a new tag to master
 * Simple Django app for testing purposes (optional)
@@ -85,6 +85,7 @@ pytest --cov
 [black]: https://github.com/psf/black
 [isort]: https://github.com/timothycrosley/isort
 [flake8]: https://github.com/PyCQA/flake8
+[mypy]: http://mypy-lang.org/
 [travis]: https://travis-ci.org/
 [precommit]: https://pre-commit.com/
 [tox]: http://testrun.org/tox/
