@@ -22,6 +22,7 @@ script:
 - twine check dist/*
 - tox
 
+{% if cookiecutter.pypi_deploy == 'y' -%}
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
@@ -33,3 +34,4 @@ deploy:
     repo: {{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
     condition: $TRAVIS_PYTHON_VERSION = 3.8
     tags: true
+{%- endif %}
