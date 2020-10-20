@@ -23,16 +23,10 @@ def move(source, dest):
 if __name__ == '__main__':
 
     if '{{ cookiecutter.use_django }}' != 'y':
-        remove('tests/app')
-        remove('tests/manage.py')
-        remove('tests/settings.py')
-        remove('tests/urls.py')
-        remove('tests/wsgi.py')
-        move('tests/tests/test_{{cookiecutter.project_slug}}.py', 'tests/test_{{cookiecutter.project_slug}}.py')
-        remove('tests/tests')
+        remove('tests')
 
     if '{{ cookiecutter.use_pytest }}' != 'y':
-        remove('tests')
+        remove('tests/tests')
         remove('pytest.ini')
 
     if '{{ cookiecutter.use_precommit }}' != 'y':
