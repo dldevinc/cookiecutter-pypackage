@@ -33,7 +33,6 @@ if __name__ == '__main__':
 
     if '{{ cookiecutter.use_pytest }}' != 'y':
         remove('tests')
-        remove('tox.ini')
         remove('pytest.ini')
 
     if '{{ cookiecutter.use_precommit }}' != 'y':
