@@ -1,13 +1,13 @@
 {% if cookiecutter.use_pytest == 'y' -%}
-pytest==5.4.3
+pytest==6.2.2
 pytest-env==0.6.2
 {% if cookiecutter.use_coverage == 'y' -%}
-pytest-cov==2.10.0
+pytest-cov==2.11.1
 {% endif -%}
 {% if cookiecutter.use_django == 'y' -%}
-pytest-django==3.9.0
+pytest-django==4.1.0
 {% endif -%}
 pytest-pythonpath==0.7.3
-pytest-tldr==0.2.1
-pytest-xdist==1.33.0
+pytest-tldr==0.2.2
+pytest-xdist==2.2.1
 {% endif %}
