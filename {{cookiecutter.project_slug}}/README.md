@@ -7,7 +7,7 @@
 {% if cookiecutter.use_travis == 'y' -%}
 [![Build Status](https://travis-ci.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg?branch=master)](https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})
 {%- endif %}
-[Software license](https://img.shields.io/pypi/l/{{ cookiecutter.project_slug }}.svg)
+[![Software license](https://img.shields.io/pypi/l/{{ cookiecutter.project_slug }}.svg)](https://pypi.org/project/{{ cookiecutter.project_slug }}/)
 
 ## Compatibility
 {% if cookiecutter.use_django =='y' -%}

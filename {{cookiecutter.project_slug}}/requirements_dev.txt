@@ -1,5 +1,6 @@
 {% if cookiecutter.use_pytest == 'y' -%}
-pytest==6.2.2
+pytest==6.1.2; python_version < '3.6'
+pytest==6.2.2; python_version >= '3.6'
 pytest-env==0.6.2
 {% if cookiecutter.use_coverage == 'y' -%}
 pytest-cov==2.11.1
