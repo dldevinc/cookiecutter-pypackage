@@ -1,5 +1,5 @@
 files: \.py$
-exclude: '^(/tests/{% if cookiecutter.use_django == 'y' %}|/migrations/{% endif %})'
+exclude: '(/tests/{% if cookiecutter.use_django == 'y' %}|/migrations/{% endif %})'
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.4.0
