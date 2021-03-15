@@ -13,3 +13,21 @@
 * `django` >= 2.0
 {%- endif %}
 * `python` >= 3.6
+
+## Installation
+Install the latest release with pip:
+
+```shell
+pip install {{ cookiecutter.project_slug }}
+```
+
+{% if cookiecutter.use_django =='y' -%}
+Add `{{ cookiecutter.project_dir }}` to your INSTALLED_APPS in django's `settings.py`:
+
+```python
+INSTALLED_APPS = (
+    # other apps
+    "{{ cookiecutter.project_dir }}",
+)
+```
+{%- endif %}
