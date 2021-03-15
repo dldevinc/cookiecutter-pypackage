@@ -5,7 +5,8 @@ pytest-env==0.6.2
 pytest-cov==2.11.1
 {% endif -%}
 {% if cookiecutter.use_django == 'y' -%}
-pytest-django==4.1.0
+pytest-django==3.10.0; python_version < '3.6'
+pytest-django==4.1.0; python_version >= '3.6'
 {% endif -%}
 pytest-pythonpath==0.7.3
 pytest-tldr==0.2.3
