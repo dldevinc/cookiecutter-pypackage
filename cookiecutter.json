@@ -13,7 +13,6 @@
   "use_coverage": "y",
   "use_django": "y",
   "use_precommit": "y",
-  "use_travis": "y",
   "pypi_deploy": "y",
   "full_name": "Mihail Mishakin",
   "email": "x896321475@gmail.com",
