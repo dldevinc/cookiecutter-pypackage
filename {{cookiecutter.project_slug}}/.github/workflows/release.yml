@@ -8,9 +8,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    {%- if cookiecutter.use_pytest or not cookiecutter.use_django %}
-    needs: [tests]
-    {% endif %}
 
     steps:
       - uses: actions/checkout@v2
