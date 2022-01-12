@@ -9,9 +9,9 @@
 
 ## Compatibility
 {% if cookiecutter.use_django =='y' -%}
-* `django` >= 2.0
+* `django` >= 2.2
 {%- endif %}
-* `python` >= 3.6
+* `python` >= 3.8
 
 ## Installation
 Install the latest release with pip:
