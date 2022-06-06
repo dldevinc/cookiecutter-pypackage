@@ -1,6 +1,5 @@
 {% if cookiecutter.use_pytest == 'y' -%}
 pytest==7.1.2
-pytest-env==0.6.2
 {% if cookiecutter.use_coverage == 'y' -%}
 pytest-cov==3.0.0
 {% endif -%}
