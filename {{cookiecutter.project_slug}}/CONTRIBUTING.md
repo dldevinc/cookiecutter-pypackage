@@ -25,6 +25,7 @@
 
 {% if cookiecutter.use_precommit == 'y' -%}
 #### Pre-Commit Hooks
+
 We use [`pre-commit`](https://pre-commit.com/) hooks to simplify linting
 and ensure consistent formatting among contributors. Use of `pre-commit`
 is not a requirement, but is highly recommended.

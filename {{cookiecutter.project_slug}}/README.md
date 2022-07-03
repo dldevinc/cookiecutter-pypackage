@@ -9,10 +9,11 @@
 [![Software license](https://img.shields.io/pypi/l/{{ cookiecutter.project_slug }}.svg)](https://pypi.org/project/{{ cookiecutter.project_slug }}/)
 
 ## Compatibility
+
+-   `python` >= 3.8
 {% if cookiecutter.use_django =='y' -%}
-*   `django` >= 2.2
+-   `django` >= 2.2
 {%- endif %}
-*   `python` >= 3.8
 
 ## Installation
 
