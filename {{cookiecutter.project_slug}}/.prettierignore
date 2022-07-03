@@ -3,5 +3,6 @@
 *.yml
 *.yaml
 *.html
+.venv/
 package.json
 package-lock.json
