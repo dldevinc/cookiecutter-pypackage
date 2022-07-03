@@ -1,4 +1,5 @@
 # {{ cookiecutter.project_name }}
+
 {{ cookiecutter.project_short_description }}
 
 {% if cookiecutter.pypi_deploy == 'y' -%}
@@ -9,11 +10,12 @@
 
 ## Compatibility
 {% if cookiecutter.use_django =='y' -%}
-* `django` >= 2.2
+*   `django` >= 2.2
 {%- endif %}
-* `python` >= 3.8
+*   `python` >= 3.8
 
 ## Installation
+
 Install the latest release with pip:
 
 ```shell
