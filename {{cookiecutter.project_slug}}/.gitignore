@@ -63,5 +63,7 @@ venv/
 
 {% if cookiecutter.use_django == 'y' -%}
 # tests
-**/tests/db.sqlite3
+/tests/db.sqlite3
+/tests/static/
+/tests/media/
 {%- endif %}
