@@ -24,6 +24,7 @@ if __name__ == '__main__':
 
     if '{{ cookiecutter.use_django }}' != 'y':
         remove('tests')
+        remove('manage.py')
 
     if '{{ cookiecutter.use_pytest }}' != 'y':
         remove('tests/tests')
