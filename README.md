@@ -6,9 +6,8 @@
 * Testing setup with `pytest`
 * Measuring code coverage with `pytest-cov`
 * [Tox][tox] testing
-* [Black][black] and [isort][isort] pre-commit hooks for formatting
+* [isort][isort] and [prettier][prettier] pre-commit hooks for formatting
 * [Flake8][flake8] and [MyPy][mypy] pre-commit hooks for linting
-* [Travis-CI][travis]: Ready for Travis CI testing
 * Auto-release to PyPI when you push a new tag to master
 * Simple Django app for testing purposes (optional)
 
@@ -18,16 +17,6 @@ Install the latest Cookiecutter
 
 ```shell script
 pip install -U cookiecutter
-```
-
-Install `ruby` and `ruby-dev` for Travis CLI
-```shell script
-sudo apt-get -y install ruby ruby-dev
-```
-
-Install Travis CLI
-```shell script
-sudo gem install travis
 ```
 
 Install [pre-commit][precommit] framework
@@ -46,28 +35,20 @@ cookiecutter https://github.com/dldevinc/cookiecutter-pypackage.git
 ```
 
 Then:
-* Create a repo and put it there.
-* Add the repo to your [Travis-CI][travis] account.
-* [Register][pypi] your project with PyPI.
+* Create a virtual environment.
 ```shell script
-python3 setup.py sdist bdist_wheel
-twine upload --skip-existing dist/*
+python3 -m venv --prompt="env" .venv
 ```
-* [Create][pypi_apikey] a new PyPI API token and **encrypt** it for Travis CI:
+* Install the requirements into a virtualenv
 ```shell script
-travis encrypt API_TOKEN --add deploy.password
+pip install -r requirements.txt
 ```
-
-* Install the dev requirements into a virtualenv
-```shell script
-pip install -r requirements_dev.txt
-```
-* Install `pre-commit` hooks: 
+* Write some code.
+* Install `pre-commit` hooks (optionally): 
 ```shell script
 pre-commit install
 ```
-* Write some code
-* Run formatters and linters:
+* ... or run formatters and linters manualy:
 ```shell script
 pre-commit run -a
 ```
@@ -79,15 +60,22 @@ tox -s
 ```shell script
 pytest --cov
 ```
+* Create a GitHub repo.
+* [Register][pypi] your project with PyPI.
+```shell script
+python3 setup.py sdist bdist_wheel
+twine upload --skip-existing dist/*
+```
+* [Create][pypi_apikey] a new PyPI API token and save it 
+  as GitHub repository secret named `PYPI_PASSWORD`.
 * Release your package by pushing a new tag to master.
 
 [cookiecutter]: https://github.com/audreyr/cookiecutter
-[black]: https://github.com/psf/black
+[precommit]: https://pre-commit.com/
 [isort]: https://github.com/timothycrosley/isort
+[prettier]: https://prettier.io/
 [flake8]: https://github.com/PyCQA/flake8
 [mypy]: http://mypy-lang.org/
-[travis]: https://travis-ci.org/
-[precommit]: https://pre-commit.com/
 [tox]: http://testrun.org/tox/
 [twine]: https://github.com/pypa/twine
 [pypi]: https://packaging.python.org/tutorials/packaging-projects/#uploading-the-distribution-archives

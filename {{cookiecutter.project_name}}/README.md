@@ -2,9 +2,7 @@
 
 {{ cookiecutter.project_short_description }}
 
-{% if cookiecutter.pypi_deploy == 'y' -%}
 [![PyPI](https://img.shields.io/pypi/v/{{ cookiecutter.project_name }}.svg)](https://pypi.org/project/{{ cookiecutter.project_name }}/)
-{%- endif %}
 [![Build Status](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/actions/workflows/tests.yml/badge.svg)](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }})
 [![Software license](https://img.shields.io/pypi/l/{{ cookiecutter.project_name }}.svg)](https://pypi.org/project/{{ cookiecutter.project_name }}/)
 
