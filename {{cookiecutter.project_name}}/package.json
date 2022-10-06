@@ -1,5 +1,5 @@
 {
-  "name": "{{ cookiecutter.project_slug }}",
+  "name": "{{ cookiecutter.project_name }}",
   "version": "{{ cookiecutter.version }}",
   "description": "{{ cookiecutter.project_short_description }}",
   "main": "{{cookiecutter.project_dir}}/static/{{cookiecutter.project_dir}}/index.js",

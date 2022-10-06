@@ -1,7 +1,6 @@
 {
-  "project_name": "Python Package",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-  "project_dir": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+  "project_name": "awesome-package",
+  "project_dir": "{{ cookiecutter.project_name.replace('-', '_') }}",
   "project_short_description": "My Python package",
   "version": "0.1.0",
   "stage": [

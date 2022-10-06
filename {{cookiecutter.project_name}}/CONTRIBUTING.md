@@ -6,11 +6,11 @@
 
 1. Clone the repository
     ```shell
-    git clone https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+    git clone https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}
     ```
 1. Create a virtualenv
     ```shell
-    cd {{ cookiecutter.project_slug }}
+    cd {{ cookiecutter.project_name }}
     virtualenv env
     ```
 1. Activate virtualenv
