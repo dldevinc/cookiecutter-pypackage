@@ -22,6 +22,25 @@
     pip install -r ./requirements.txt
     pip install -e .
     ```
+{% if cookiecutter.use_webpack == 'y' %}
+    ```shell
+    npm i
+    npm run build
+    ```
+{%- endif %}
+{% if cookiecutter.use_django == 'y' -%}
+1. Run test project
+	```shell
+	python3 manage.py migrate
+	python3 manage.py loaddata tests/fixtures.json
+	```
+
+	```shell
+	python3 manage.py runserver
+	```
+
+	> Django admin credentials: `admin` / `admin`
+{%- endif %}
 
 {% if cookiecutter.use_precommit == 'y' -%}
 #### Pre-Commit Hooks
