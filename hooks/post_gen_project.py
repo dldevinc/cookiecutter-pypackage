@@ -33,9 +33,10 @@ if __name__ == '__main__':
 
     if '{{ cookiecutter.use_precommit }}' != 'y':
         remove('.pre-commit-config.yaml')
-    
+        remove('.prettierignore')
+        remove('.prettierrc')
+
     if '{{ cookiecutter.use_webpack }}' != 'y':
         remove('package.json')
         remove('.npmignore')
-        remove('.prettierignore')
-        remove('.prettierrc')
+

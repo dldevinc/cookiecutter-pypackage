@@ -1,4 +1,4 @@
-exclude: '(tests/{% if cookiecutter.use_django == 'y' %}|/migrations/{% endif %})'
+exclude: "(tests/{% if cookiecutter.use_django == 'y' %}|/migrations/{% endif %})"
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
@@ -34,4 +34,4 @@ repos:
     rev: v2.7.1
     hooks:
       - id: prettier
-        args: [ "{{ cookiecutter.project_dir }}" ]
+        args: ["{{ cookiecutter.project_dir }}"]
