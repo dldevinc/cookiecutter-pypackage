@@ -4,7 +4,6 @@ include *.md
 include package.json
 {%- endif %}
 graft {{ cookiecutter.project_dir }}
-graft tests
 global-exclude .git*
 global-exclude __pycache__
 global-exclude *.py[co]
