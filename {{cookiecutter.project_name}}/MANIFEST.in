@@ -1,7 +1,10 @@
 include LICENSE
-include README.md
-include CHANGELOG.md
-
-recursive-exclude tests *
-recursive-exclude * __pycache__
-recursive-exclude * *.py[co]
+include *.md
+{% if cookiecutter.use_webpack == 'y' -%}
+include package.json
+{%- endif %}
+graft {{ cookiecutter.project_dir }}
+graft tests
+global-exclude .git*
+global-exclude __pycache__
+global-exclude *.py[co]
