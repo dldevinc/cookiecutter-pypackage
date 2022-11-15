@@ -37,6 +37,8 @@ if __name__ == '__main__':
         remove('.prettierrc')
 
     if '{{ cookiecutter.use_webpack }}' != 'y':
-        remove('package.json')
         remove('.npmignore')
-
+        remove('.babelrc')
+        remove('.browserslistrc')
+        remove('package.json')
+        remove('webpack.config.js')
