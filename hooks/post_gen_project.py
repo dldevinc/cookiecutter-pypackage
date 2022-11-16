@@ -29,7 +29,6 @@ if __name__ == '__main__':
     if '{{ cookiecutter.use_pytest }}' != 'y':
         remove('tests/tests')
         remove('pytest.ini')
-        remove('.github/workflows/tests.yml')
 
     if '{{ cookiecutter.use_precommit }}' != 'y':
         remove('.pre-commit-config.yaml')
