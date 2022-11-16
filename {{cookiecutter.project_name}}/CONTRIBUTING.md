@@ -18,6 +18,7 @@
     source .venv/bin/activate
     ```
 1. Install dependencies as well as a local editable copy of the library
+
     ```shell
     pip install -r ./requirements.txt
     pip install -e .
@@ -30,16 +31,17 @@
 {%- endif %}
 {% if cookiecutter.use_django == 'y' -%}
 1. Run test project
-	```shell
-	python3 manage.py migrate
-	python3 manage.py loaddata tests/fixtures.json
-	```
 
-	```shell
-	python3 manage.py runserver
-	```
+    ```shell
+    python3 manage.py migrate
+    python3 manage.py loaddata tests/fixtures.json
+    ```
 
-	> Django admin credentials: `admin` / `admin`
+    ```shell
+    python3 manage.py runserver
+    ```
+
+    > Django admin credentials: `admin` / `admin`
 {%- endif %}
 
 {% if cookiecutter.use_precommit == 'y' -%}

@@ -5,7 +5,8 @@
   "main": "{{cookiecutter.project_dir}}/static/{{cookiecutter.project_dir}}/src/widget.js",
   "scripts": {
     "build": "webpack --mode production",
-    "build:dev": "webpack --mode development"
+    "build:dev": "webpack --mode development",
+    "watch": "webpack --mode production --watch"
   },
   "author": "{{ cookiecutter.full_name }}",
   "license": "{{ cookiecutter.open_source_license }}",
