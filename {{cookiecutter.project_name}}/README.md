@@ -10,7 +10,7 @@
 
 -   `python` >= 3.8
 {% if cookiecutter.use_django =='y' -%}
--   `django` >= 2.2
+-   `django` >= 3.2
 {%- endif %}
 
 ## Installation
