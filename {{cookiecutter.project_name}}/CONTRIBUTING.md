@@ -25,8 +25,8 @@
     ```
 {% if cookiecutter.use_webpack == 'y' %}
     ```shell
-    npm i
-    npm run build
+    yarn install
+    yarn build
     ```
 {%- endif %}
 {% if cookiecutter.use_django == 'y' -%}
